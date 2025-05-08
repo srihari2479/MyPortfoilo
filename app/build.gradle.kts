@@ -82,7 +82,7 @@ dependencies {
     implementation(libs.opencsv)
     implementation(libs.circleimageview)
     implementation(libs.androidx.ui.test.android)
-    implementation("technology.tabula:tabula:1.0.5")
+    implementation(libs.tabula)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.espresso.core)
