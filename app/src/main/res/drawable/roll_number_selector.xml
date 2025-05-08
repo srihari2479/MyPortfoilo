@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <shape>
+            <gradient
+                android:startColor="#E3F2FD"
+                android:endColor="#BBDEFB"
+                android:angle="45" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/card_background_neu" />
+        </shape>
+    </item>
+</selector>

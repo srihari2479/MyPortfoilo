@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="0dp">
+
+    <!-- Dark gradient background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/dark_gradient_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/editStudentCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="20dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#1A1A1A"
+        app:strokeColor="#333333"
+        app:strokeWidth="1dp"
+        app:layout_constraintWidth_max="420dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:translationZ="6dp"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/dark_card_gradient">
+
+            <TextView
+                android:id="@+id/edit_student_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:letterSpacing="0.04"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="8"
+                android:text="@string/dialog_title_edit_student"
+                android:textColor="#00E5D2"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:background="#00E5D2" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutRollNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextColor="#00E5D2"
+                app:boxStrokeColor="@color/text_input_selector_dark"
+                app:startIconDrawable="@drawable/ic_roll_number"
+                app:startIconTint="#00E5D2"
+                app:boxStrokeWidth="1.5dp"
+                app:boxStrokeWidthFocused="2.5dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:textColorHint="#80FFFFFF"
+                android:layout_marginBottom="24dp"
+                android:elevation="4dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextRollNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="@string/hint_roll_number"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.02"
+                    android:shadowColor="#80000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="4" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonPaste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#202020"
+                android:contentDescription="@string/action_paste"
+                android:elevation="6dp"
+                android:fontFamily="@font/poppins_bold"
+                android:padding="14dp"
+                android:text="@string/action_paste"
+                android:textColor="#00E5D2"
+                android:textSize="18sp"
+                android:letterSpacing="0.03"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_paste"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconTint="#00E5D2"
+                app:rippleColor="#4000E5D2"
+                app:strokeColor="#333333"
+                app:strokeWidth="1dp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#00E5D2"
+                android:contentDescription="@string/submit"
+                android:elevation="6dp"
+                android:fontFamily="@font/poppins_bold"
+                android:letterSpacing="0.03"
+                android:padding="14dp"
+                android:text="@string/submit"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_check"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconTint="#000000"
+                app:rippleColor="#80000000"
+                tools:ignore="VisualLintButtonSize" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

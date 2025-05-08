@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="0dp">
+
+    <!-- Status Bar Space -->
+    <View
+        android:id="@+id/status_bar_space"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Full Background -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@id/status_bar_space"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Toolbar with updated styling -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#000000"
+        android:elevation="4dp"
+        app:title="@string/toolbar_title_admin"
+        app:titleTextColor="#FFFFFF"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingStart="12dp"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/status_bar_space"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Dark"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Welcome Text with updated styling -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to "
+        android:textColor="#26A69A"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_extrabold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Accent Line Below Welcome Text -->
+    <View
+        android:id="@+id/accent_line"
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintStart_toStartOf="@id/welcomeText"
+        android:layout_marginTop="4dp" />
+
+    <!-- Updated Card with Gradient Overlay -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/options_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/accent_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardBackgroundColor="#1E1E1E"
+        tools:ignore="VisualLintBounds">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Gradient Overlay -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_card_background" />
+
+            <!-- Admin Options Layout -->
+            <LinearLayout
+                android:id="@+id/adminOptionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:animateLayoutChanges="true">
+
+                <!-- Add Student Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonAddStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#004D40"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/button_add_student"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_add"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconTint="#FFFFFF"
+                    app:rippleColor="#80FFFFFF"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <!-- Edit Student Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonEditStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#FFC107"
+                    android:elevation="4dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_bold"
+                    android:maxLines="1"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/button_edit_student"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_edit"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconTint="#000000"
+                    app:rippleColor="#80000000"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <!-- Change Password Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#B71C1C"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/button_change_password"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/ic_lock"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconTint="#FFFFFF"
+                    app:rippleColor="#80FFFFFF"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <!-- List Students Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonListStudents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#00897B"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="@string/button_list_students"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="10dp"
+                    app:icon="@android:drawable/ic_menu_agenda"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconTint="#FFFFFF"
+                    app:rippleColor="#80FFFFFF"
+                    tools:ignore="VisualLintButtonSize" />
+
+                <!-- Student Issues Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonStudentIssues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#3949AB"
+                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:text="Student Issues"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:cornerRadius="10dp"
+                    app:icon="@android:drawable/ic_dialog_alert"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconTint="#FFFFFF"
+                    app:rippleColor="#80FFFFFF"
+                    tools:ignore="HardcodedText,VisualLintButtonSize" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- App Version Text -->
+    <TextView
+        android:id="@+id/versionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Version 1.0"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

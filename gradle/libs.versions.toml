@@ -1,0 +1,54 @@
+[versions]
+androidGradlePlugin = "8.7.3"
+itext = "7.2.5"
+circleimageview = "3.1.0"
+glide = "4.16.0"
+googleServices = "4.4.2"
+kotlin = "2.1.0"
+firebaseBom = "33.10.0"
+androidxCore = "1.15.0"
+appcompat = "1.7.0"
+kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxCoroutinesCore = "1.7.3"
+lottie = "6.5.2"
+material = "1.12.0"
+constraintlayout = "2.2.1"
+cardview = "1.0.0"
+junit = "4.13.2"
+androidxTestJunit = "1.2.1"
+espresso = "3.6.1"
+activity = "1.10.1"
+kotlinGradlePlugin = "2.1.0"
+recyclerview = "1.4.0"
+uiAndroid = "1.7.8"
+uiTestAndroid = "1.7.8"
+opencsv = "5.9"
+photoview = "2.3.0"
+
+[libraries]
+
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTestJunit" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
+androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroid" }
+androidx-ui-test-android = { group = "androidx.compose.ui", name = "ui-test-android", version.ref = "uiTestAndroid" }
+photoview = { module = "com.github.chrisbanes:PhotoView", version.ref = "photoview" }
+opencsv = { module = "com.opencsv:opencsv", version.ref = "opencsv" }
+itext-core = { module = "com.itextpdf:itext7-core", version.ref = "itext" }

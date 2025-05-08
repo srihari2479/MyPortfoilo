@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Glow effect (outer circle) -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#80FFFFFF" /> <!-- Semi-transparent white for glow -->
+            <size
+                android:width="80dp"
+                android:height="80dp" />
+        </shape>
+    </item>
+    <!-- Bulb core -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" /> <!-- Solid white bulb -->
+            <size
+                android:width="60dp"
+                android:height="60dp" />
+        </shape>
+    </item>
+</layer-list>

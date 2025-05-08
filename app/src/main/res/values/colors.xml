@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fab_gradient">#26A69A</color>
+    <color name="text_input_selector">#0288D1</color>
+    <color name="toolbar_gradient_start">#0288D1</color>
+    <color name="toolbar_gradient_end">#4FC3F7</color>
+    <color name="card_background_neu">#ECEFF1</color>
+    <color name="neumorphic_stroke">#D0D8E0</color>
+    <color name="accent_teal">#26A69A</color>
+    <color name="text_primary_dark">#1A237E</color>
+    <color name="text_hint_light">#B0BEC5</color>
+    <color name="light_gray">#FAFAFA</color>
+    <color name="toolbar_start">#0288D1</color>
+    <color name="toolbar_end">#4FC3F7</color>
+    <color name="background_start">#E1F5FE</color>
+    <color name="background_end">#B3E5FC</color>
+    <color name="button_gradient_start">#388E3C</color>
+    <color name="button_gradient_mid">#1976D2</color>
+    <color name="button_gradient_end">#FBC02D</color>
+    <color name="button_gradient_save">#388E3C</color>
+    <color name="accent_purple">#7C4DFF</color>
+    <color name="accent_purple_light">#B388FF</color>
+    <color name="background_light">#F4F6F9</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_hint">#757575</color>
+    <color name="accent_blue">#0288D1</color>
+    <color name="dark_green">#2E7D32</color>
+    <color name="dark_yellow">#FFB300</color>
+    <color name="dark_red">#C62828</color>
+    <color name="hint_gray">#B0BEC5</color> <!-- Light gray for hints -->
+    <color name="input_background">#20FFFFFF</color> <!-- Semi-transparent white -->
+    <!-- Gradient Colors -->
+    <color name="text_input_selector_dark">#FF000000</color>
+    <color name="gradient_start_card">#1A237E</color> <!-- Dark blue -->
+    <color name="gradient_end_card">#00695C</color> <!-- Dark teal -->
+    <color name="gradient_start_teal">#26A69A</color> <!-- Light teal -->
+    <color name="gradient_end_teal">#00695C</color> <!-- Dark teal -->
+    <color name="gradient_start_yellow">#FFCA28</color> <!-- Light yellow -->
+    <color name="gradient_end_yellow">#FF8F00</color> <!-- Dark orange -->
+    <!-- Ripple Colors -->
+    <color name="teal_ripple">#80CBC4</color> <!-- Semi-transparent teal -->
+    <color name="yellow_ripple">#80FFA000</color> <!-- Semi-transparent yellow -->
+    <color name="action_bar_color">#FFFFFFFF</color>
+    <color name="white_alpha_30">#4DFFFFFF</color>
+    <color name="gradient_start">#1A2525</color>
+    <color name="gradient_end">#0D1414</color>
+    <color name="accent_teal_dark">#00E5D2</color>
+
+    <!-- Dark theme text colors -->
+    <color name="text_primary_dark_theme">#FFFFFF</color>
+    <color name="text_secondary_dark_theme">#B3FFFFFF</color>
+    <color name="text_hint_dark">#80FFFFFF</color>
+
+    <!-- Dark theme background colors -->
+    <color name="background_dark">#000000</color>
+    <color name="card_background_dark">#1A1A1A</color>
+    <color name="button_background_dark">#202020</color>
+
+    <!-- Dark theme stroke colors -->
+    <color name="stroke_dark">#333333</color>
+
+
+    <color name="primary">#1565C0</color>
+    <color name="primary_variant">#0D47A1</color>
+    <color name="primary_light">#42A5F5</color>
+
+    <!-- Accent colors -->
+
+    <color name="accent_teal_light">#4DB6AC</color>
+
+    <!-- Neutral colors -->
+
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Text colors -->
+
+    <color name="text_secondary_dark">#757575</color>
+    <color name="text_disabled">#9E9E9E</color>
+
+    <!-- UI element colors -->
+    <color name="divider_color">#E0E0E0</color>
+    <color name="stroke_color">#EEEEEE</color>
+    <color name="icon_color">#616161</color>
+    <color name="profile_placeholder_bg">#BBDEFB</color>
+
+    <!-- State colors -->
+    <color name="like_active">#E91E63</color>
+    <color name="bookmark_active">#FFC107</color>
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <View
+                android:id="@+id/status_bar_space"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Toolbar -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/black"
+                android:elevation="4dp"
+                android:fontFamily="@font/poppins_extrabold"
+                app:contentInsetStart="16dp"
+                app:layout_constraintTop_toBottomOf="@id/status_bar_space"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                app:navigationIconTint="@color/white"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Dark"
+                app:title="Report Issue"
+                app:titleMarginStart="8dp"
+                app:titleTextColor="@color/white" />
+
+            <!-- Background DIET Text Watermark -->
+            <TextView
+                android:id="@+id/textViewDietWatermark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:rotation="-15"
+                android:text="DIET"
+                android:textColor="#0DFFFFFF"
+                android:textSize="120sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText,TextContrastCheck,VisualLintOverlap" />
+
+            <!-- Card Layout -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/reportCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#1A1A1A"
+                app:strokeColor="#444444"
+                app:strokeWidth="1dp"
+                app:layout_constraintWidth_max="450dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:translationZ="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:background="@drawable/gradient_background_professional"
+                    tools:ignore="ExtraText">
+
+                    <!-- Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/submit_new_issue"
+                        android:textColor="#37474F"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Roll Number Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:hintTextColor="@color/accent_teal"
+                        app:boxStrokeColor="@color/text_input_selector_professional"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/accent_teal"
+                        app:hintAnimationEnabled="true"
+                        app:hintEnabled="true"
+                        android:textColorHint="#A0A0A0">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextRollNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/enter_roll_number"
+                            android:inputType="textCapCharacters"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="TextContrastCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Description Input (Increased Size) -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        app:hintTextColor="@color/accent_teal"
+                        app:boxStrokeColor="@color/text_input_selector_professional"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/accent_teal"
+                        app:hintAnimationEnabled="true"
+                        app:hintEnabled="true"
+                        android:textColorHint="#A0A0A0">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="top|start"
+                            android:hint="@string/describe_the_issue"
+                            android:inputType="textMultiLine"
+                            android:maxLines="8"
+                            android:minLines="5"
+                            android:padding="16dp"
+                            android:scrollbars="vertical"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="TextContrastCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                  ]
+
+                    <!-- Submit Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/accent_teal"
+                        android:text="@string/submit_report"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="16dp"
+                        app:cornerRadius="16dp"
+                        app:rippleColor="#80FFFFFF"
+                        android:elevation="4dp"
+                        app:icon="@drawable/ic_send"
+                        app:iconTint="@color/white"
+                        app:iconGravity="textEnd"
+                        app:iconPadding="8dp"
+                        tools:ignore="VisualLintButtonSize" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Additional Information Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/infoCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#1A1A1A"
+                app:strokeColor="#444444"
+                app:strokeWidth="1dp"
+                app:layout_constraintWidth_max="450dp"
+                app:layout_constraintTop_toBottomOf="@id/reportCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                android:translationZ="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/response_time"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/accent_teal"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/issues_are_typically_addressed_within_24_48_hours_critical_issues_will_be_prioritized"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="#E0E0E0"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="8dp"
+                        app:dividerColor="#444444"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/need_help"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="#E0E0E0"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/textViewContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_23u41a4215_diet_edu_in"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/accent_teal"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>

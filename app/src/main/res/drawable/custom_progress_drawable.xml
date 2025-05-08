@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:toDegrees="360"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:duration="1200"> <!-- 1.2 seconds per rotation -->
+    <shape>
+        <gradient
+            android:startColor="@color/toolbar_gradient_start"
+        android:endColor="@color/toolbar_gradient_end"
+        android:type="linear"
+        android:angle="45"/>
+        <size
+            android:width="60dp"
+            android:height="60dp"/>
+        <corners android:radius="30dp"/>
+    </shape>
+</rotate>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:padding="0dp">
+
+            <View
+                android:id="@+id/status_bar_space"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/black"
+                android:elevation="4dp"
+                android:fontFamily="@font/poppins_extrabold"
+                app:contentInsetStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/status_bar_space"
+                app:navigationIconTint="@color/white"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Dark"
+                app:title="@string/toolbar_title_main"
+                app:titleMarginStart="8dp"
+                app:titleTextColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textViewDietWatermark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:gravity="center"
+                android:rotation="0"
+                android:text="@string/diet"
+                android:textColor="@color/white"
+                android:textSize="120sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.618" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/searchCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#1A1A1A"
+                app:strokeColor="#444444"
+                app:strokeWidth="1dp"
+                app:layout_constraintWidth_max="400dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:translationZ="4dp">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/gradient_background_professional">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/student_search"
+                        android:textColor="#37474F"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:endIconDrawable="@drawable/ic_search"
+                        app:endIconTint="@color/accent_teal"
+                        app:endIconMode="custom"
+                        app:hintTextColor="@color/accent_teal"
+                        app:hintEnabled="false"
+                        app:boxStrokeColor="@color/text_input_selector_professional"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:textColorHint="@color/text_hint_light"
+                        android:backgroundTint="#15FFFFFF"
+                        android:elevation="2dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextRollNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/transparent"
+                            android:fontFamily="@font/poppins_medium"
+                            android:hint="@string/hint_roll_number"
+                            android:inputType="text"
+                            android:padding="16dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="16sp"
+                            android:letterSpacing="0.01"
+                            tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewStudentDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#1A1A1A"
+                app:strokeColor="@color/black"
+                app:strokeWidth="1dp"
+                app:layout_constraintWidth_max="400dp"
+                app:layout_constraintTop_toBottomOf="@id/searchCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:translationZ="4dp"
+                android:animateLayoutChanges="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/inner_card_gradient">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/student_profile"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/accent_teal"
+                        android:layout_marginBottom="16dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageViewStudent"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:contentDescription="@string/student_image"
+                        android:scaleType="centerCrop"
+                        app:civ_border_color="@color/accent_teal"
+                        app:civ_border_width="2dp"
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="12dp"
+                        android:background="#22FFFFFF"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="2dp"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical"
+                        app:cornerRadius="12dp">
+                        <ImageView
+                            android:id="@+id/iconRollNumber"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_roll_number"
+                            app:tint="@color/accent_teal" />
+                        <TextView
+                            android:id="@+id/textViewRollNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_roll_number"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="12dp"
+                        android:background="#22FFFFFF"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="2dp"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical"
+                        app:cornerRadius="12dp">
+                        <ImageView
+                            android:id="@+id/iconName"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_person"
+                            app:tint="@color/accent_teal" />
+                        <TextView
+                            android:id="@+id/textViewName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_name"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="12dp"
+                        android:background="#22FFFFFF"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="2dp"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical"
+                        app:cornerRadius="12dp">
+                        <ImageView
+                            android:id="@+id/iconCgpa"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_grade"
+                            app:tint="@color/accent_teal" />
+                        <TextView
+                            android:id="@+id/textViewCgpa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_cgpa"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="12dp"
+                        android:background="#22FFFFFF"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="2dp"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical"
+                        app:cornerRadius="12dp">
+                        <ImageView
+                            android:id="@+id/iconBacklogs"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/ic_backlog"
+                            app:tint="@color/accent_teal" />
+                        <TextView
+                            android:id="@+id/textViewBacklogs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_backlogs"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="12dp"
+                        android:background="#22FFFFFF"
+                        android:layout_marginBottom="8dp"
+                        android:elevation="2dp"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical"
+                        app:cornerRadius="12dp">
+                        <ImageView
+                            android:id="@+id/iconPercentage"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_percentage"
+                            app:tint="@color/accent_teal" />
+                        <TextView
+                            android:id="@+id/textViewPercentage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_percentage"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/refresh_button"
+                android:src="@drawable/ic_refresh"
+                android:tooltipText="@string/refresh_button"
+                app:backgroundTint="@color/accent_teal"
+                app:elevation="12dp"
+                app:fabCustomSize="56dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="#80CBC4"
+                android:translationZ="12dp"
+                tools:ignore="ImageContrastCheck,UnusedAttribute" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/splashOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BB000000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewDiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIET"
+            android:textSize="140sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textColor="#FFFFFF"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="25"
+            android:elevation="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/roll_number_selector"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="@drawable/gradient_card_background_subtle">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBoxSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:buttonTint="@color/selector_checkbox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/select_roll_number" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textViewRollNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary_dark"
+            android:fontFamily="@font/poppins_medium"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/_23u41a4201"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toEndOf="@id/checkBoxSelect"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonCopy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCopy"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:tooltipText="@string/action_copy_roll_number"
+            app:icon="@drawable/ic_copy_advanced"
+            app:iconSize="20dp"
+            app:iconTint="@color/accent_teal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/buttonDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#80CBC4"
+            tools:ignore="UnusedAttribute,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDelete"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@android:color/transparent"
+            android:tooltipText="@string/action_delete_student"
+            app:icon="@drawable/ic_delete_advanced"
+            app:iconSize="20dp"
+            app:iconTint="@color/dark_red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="#80F44336"
+            tools:ignore="SpeakableTextPresentCheck,UnusedAttribute,TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

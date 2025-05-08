@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876449533936",
+    "project_id": "csm-student-app",
+    "storage_bucket": "csm-student-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876449533936:android:f1d3bd08fef977014a1735",
+        "android_client_info": {
+          "package_name": "com.example.csmstudentapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy7jwXm1UXQXBla5bBn90POdqlHCr9cKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

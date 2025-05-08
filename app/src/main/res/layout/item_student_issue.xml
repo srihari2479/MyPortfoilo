@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/card_background_neu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Roll Number -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/roll_number_icon"
+                android:src="@drawable/ic_roll_number"
+                app:tint="@color/accent_teal"
+                tools:ignore="ImageContrastCheck" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewRollNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Roll Number: "
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_dark"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="12dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/description_icon"
+                android:src="@drawable/ic_description"
+                app:tint="@color/accent_teal"
+                tools:ignore="ImageContrastCheck" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/issue"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_dark"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/status_icon"
+                android:src="@drawable/ic_status"
+                app:tint="@color/accent_teal"
+                tools:ignore="ImageContrastCheck" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/status"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary_dark"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="12dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Completed Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/completed"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dark_green"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_check"
+            app:iconTint="@color/white"
+            app:iconGravity="start"
+            android:layout_gravity="end" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

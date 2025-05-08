@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#121212"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/titleCategorize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categorize Roll Numbers"
+            android:textSize="24sp"
+            android:textColor="#00C4B4"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_gravity="center"
+            android:shadowColor="#8000C4B4"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/radio_group_dark_gradient"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/radioNewDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create New Department"
+                android:textColor="#E0E0E0"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="10dp"
+                android:checked="true"
+                android:buttonTint="@color/accent_teal"
+                android:background="@drawable/radio_ripple_dark"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/radioExistingDepartment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Move to Existing Department"
+                android:textColor="#E0E0E0"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="10dp"
+                android:buttonTint="@color/accent_teal"
+                android:background="@drawable/radio_ripple_dark"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchDepartmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:hintTextColor="@color/accent_teal"
+            app:boxStrokeColor="@color/accent_teal"
+            app:boxStrokeWidth="2dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:backgroundTint="#1E1E1E"
+            app:boxBackgroundColor="#1E1E1E">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSearchDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="64dp"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textSize="18sp"
+                android:textColor="#E0E0E0"
+                android:textColorHint="#9E9E9E"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Search Departments"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/newDepartmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextColor="@color/accent_teal"
+            app:boxStrokeColor="@color/accent_teal"
+            app:boxStrokeWidth="2dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:backgroundTint="#1E1E1E"
+            app:boxBackgroundColor="#1E1E1E">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDepartmentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="New Department Name"
+                android:inputType="text"
+                android:minHeight="64dp"
+                android:padding="12dp"
+                android:textColor="#E0E0E0"
+                android:textColorHint="#9E9E9E"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewExistingDepartments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:maxHeight="240dp"
+            android:visibility="gone"
+            android:background="@drawable/recycler_dark_background"
+            android:padding="12dp"
+            android:scrollbars="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/dark_yellow"
+                android:text="Submit"
+                android:textColor="#121212"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_bold"
+                app:cornerRadius="12dp"
+                app:rippleColor="#80CBC4"
+                android:elevation="4dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
